@@ -1,0 +1,17 @@
+﻿@{
+    HomeViewModel model = Model;
+    var cars = model.Cars;
+    var brands = model.Brands;
+}
+
+<h1>Home</h1>
+<h3>Cars</h3>
+@foreach (var item in cars)
+{
+    <p>@item.Id . @item.Name - @item.Price</p>
+}
+<h3>Brands</h3>
+@foreach (var item in brands)
+{
+    <p>@item.Id . @item.Name</p>
+}
